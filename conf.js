@@ -91,8 +91,8 @@ jsproxy_config({
     'https://www.pornhubx.com/': {
       redir: 'https://php.net/'
     },
-    'http://haha.com/': {
-      content: 'Hello World'
+    'https://jable.tv/': {
+      content: '呆搜提醒您，此内容无法提供'
     },
   }
 })
