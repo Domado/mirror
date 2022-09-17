@@ -4,6 +4,7 @@
   <title>Daiso Mirror</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <base target="_blank">
   <style>
     body {
@@ -26,6 +27,15 @@
       margin: 1em;
     }
   </style>
+  <script>
+    function check(){
+    if($('#txtURL').val()=="jable.tv"){
+    if(confirm("呆搜温馨提醒您：您要访问的网站存在色情内容，已被禁止访问。")==true){
+    window.location.href="https://mirror.daiso666.com/"
+    }
+   }
+  }
+  </script>
 </head>
 <body>
   <div style="text-align: center;"><img src="__sys__/assets/daisomirror.png" style="max-width: 600px;width: 90%;"></div>
@@ -33,7 +43,7 @@
     <input id="txtURL" type="text" placeholder="输入网址..." autofocus>
   </div>
   <div class="box">
-    <button id="btnGo">访问网站</button>
+    <button id="btnGo" onclick="check()">访问网站</button>
   </div>
   <div class="box" style="padding: 10px;background-color: #2196f3;color: white;">呆搜采用国际领先最新加密协议保护您的浏览安全，您的浏览数据不会被任何人窃取。</div>
   <div class="box">
