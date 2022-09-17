@@ -26,15 +26,6 @@
       margin: 1em;
     }
   </style>
-  <script>
-    function check(){
-    if(document.getElementById("txtURL").value=="jable.tv"){
-    if(confirm("呆搜温馨提醒您：您要访问的网站存在色情内容，已被禁止访问。")==true){
-    window.location.href="https://mirror.daiso666.com/"
-    }
-   }
-  }
-  </script>
 </head>
 <body>
   <div style="text-align: center;"><img src="__sys__/assets/daisomirror.png" style="max-width: 600px;width: 90%;"></div>
@@ -42,7 +33,7 @@
     <input id="txtURL" type="text" placeholder="输入网址..." autofocus>
   </div>
   <div class="box">
-    <button id="btnGo" onclick="check()">访问网站</button>
+    <button id="btnGo">访问网站</button>
   </div>
   <div class="box" style="padding: 10px;background-color: #2196f3;color: white;">呆搜采用国际领先最新加密协议保护您的浏览安全，您的浏览数据不会被任何人窃取。</div>
   <div class="box">
@@ -68,11 +59,17 @@
     sendMsgToSw(PAGE_READY_CHECK)
 
     btnGo.onclick = function() {
+      if(document.getElementById("txtURL").value=="jable.tv"){
+    if(confirm("呆搜温馨提醒您：您要访问的网站存在色情内容，已被禁止访问。")==true){
+    window.location.href="https://mirror.daiso666.com/"
+    }
+   }else{
       const text = txtURL.value.trim()
       if (text) {
         const url = './-----' + text
         open(url, '_blank', 'noopener,noreferrer')
       }
+   }
     }
     txtURL.onkeypress = function(e) {
       if (e.keyCode === 13) {
