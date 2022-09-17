@@ -4,7 +4,6 @@
   <title>Daiso Mirror</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <base target="_blank">
   <style>
     body {
@@ -29,7 +28,7 @@
   </style>
   <script>
     function check(){
-    if($('#txtURL').val()=="jable.tv"){
+    if(document.getElementById("txtURL").value=="jable.tv"){
     if(confirm("呆搜温馨提醒您：您要访问的网站存在色情内容，已被禁止访问。")==true){
     window.location.href="https://mirror.daiso666.com/"
     }
